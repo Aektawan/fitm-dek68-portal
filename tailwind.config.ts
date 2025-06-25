@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,7 +19,16 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'sarabun': ['Sarabun', 'sans-serif'],
+				'prompt': ['Prompt', 'sans-serif'],
+			},
 			colors: {
+				// FITM Brand Colors
+				'fitm-blue': '#008DD2',
+				'fitm-yellow': '#FFCF26',
+				'fitm-orange': '#FF8143',
+				
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -84,11 +94,20 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'bounce-gentle': {
+					'0%, 100%': {
+						transform: 'translateY(0)'
+					},
+					'50%': {
+						transform: 'translateY(-10px)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'bounce-gentle': 'bounce-gentle 2s ease-in-out infinite'
 			}
 		}
 	},
